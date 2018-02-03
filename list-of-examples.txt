@@ -1,0 +1,15 @@
+import time //imports time so that the script can use time.sleep() function
+
+import RPi.GPIO as GPIO //imports the GPIO library
+
+GPIO.setmode(GPIO.BCM) //sets up the gpio pins to a specific configuration
+
+GPIO.setup(x, GPIO.OUT) //sets the pin 'x' to output data
+
+motor_1 = GPIO.PWM(x, 50) //sets the variable motor_1 as a pwm signal with 50hz, make sure it is setup with GPIO.OUT
+
+motor_1.start(x) //starts the motor with duty cycle 'x'
+
+time.sleep(x) // delays the script my 'x' value
+
+motor_1.ChangeDutyCycle(x) // sets the duty cycle to 'x'
